@@ -9,11 +9,23 @@ export default {
     extend: {
       colors: {
         primary: "#0b192f",
-        secondary: "#6ba2aa",
-        dark: "#515971",
-        lighter: "#ccd8f2",
+        secondary: "#64ffda",
+        dark: "#8892b0",
+        lighter: "#a8b2d1",
         light: "#cbd6f3"
-
+      },
+      fontFamily: {
+        Typewriter1: ["Typewriter-Thin"],
+        Typewriter2: ["Typewriter-Bold"],
+      },
+      margin: {
+        100: "24rem"
+      },
+      spacing: {
+        7.5: "1.8rem",
+        18: "4.5rem",
+        17: "4.3rem",
+        100: "72rem",
       }
     },
   },
