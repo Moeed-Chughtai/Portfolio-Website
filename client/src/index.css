@@ -11,3 +11,7 @@
     font-family: 'Typewriter-Bold';
     src: url('./fonts/Typewriter-Bold.ttf');
 }
+
+html {
+    scroll-behavior: smooth;
+}
