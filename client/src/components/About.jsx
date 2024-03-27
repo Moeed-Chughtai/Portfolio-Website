@@ -26,7 +26,7 @@ export default function About() {
                         If you share the same enthusiasm for technology and programming, feel free to reach out and connect!
                         You can also explore more about my projects and checkout my insights on my blog below.
                     </p>
-                    <img src={picture} alt="Image of Moeed Chughtai" className="object-cover w-96 h-70 ml-36"></img>
+                    <img src={picture} alt="Image of Moeed Chughtai" className="object-cover w-80 h-70 ml-36 rounded-full border-4 border-secondary"></img>
                 </div>
             </div>
         </div>

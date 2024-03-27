@@ -13,8 +13,8 @@ export default function Contact() {
                     I am actively seeking internship opportunities to further develop my skills. 
                     If you have any openings or would like to discuss potential collaborations, I would love to hear from you!
                     </p>
-                    <button className="w-40 text-lg p-4 mt-8 ml-2 border-solid border-2 border-secondary font-bold font-Typewriter2">
-                    Say Hello!</button>
+                    <a href="mailto:moeed.chughtai@outlook.com"><button className="w-40 text-lg p-4 mt-8 ml-2 border-solid border-2 border-secondary font-bold font-Typewriter2">
+                    Say Hello!</button></a>
                 </div>
             </div>
         </div>
