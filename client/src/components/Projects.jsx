@@ -1,6 +1,6 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
-import data from "../project_data";
+import data from "../data/project_data";
 
 export default function Projects() {
     const cards = data.map(item => {
