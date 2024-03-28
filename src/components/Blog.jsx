@@ -1,6 +1,7 @@
 import React from "react";
 import BlogCard from "./BlogCard";
 import data from "../data/blog_data";
+import "../index.css";
 
 export default function Blog() {
   const cards = data.map((item) => {

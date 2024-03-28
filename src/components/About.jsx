@@ -1,5 +1,6 @@
 import React from "react";
 import picture from "../assets/moeed-img.png";
+import "../index.css";
 
 export default function About() {
     return (

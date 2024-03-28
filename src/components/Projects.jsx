@@ -1,4 +1,5 @@
 import React from "react";
+import "../index.css";
 import ProjectCard from "./ProjectCard";
 import data from "../data/project_data";
 

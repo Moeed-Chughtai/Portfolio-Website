@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../index.css";
 
 export default function ProjectCard(props) {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);

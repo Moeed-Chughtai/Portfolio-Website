@@ -1,4 +1,5 @@
 import React from "react";
+import "../index.css";
 import HackathonCard from "./HackathonCard";
 import data from "../data/hackathon_data";
 
