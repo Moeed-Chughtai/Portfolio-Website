@@ -1,4 +1,3 @@
-
 import React from "react";
 import picture from "../assets/moeed-img.png";
 
@@ -9,7 +8,7 @@ export default function About() {
                 <h1 className="text-4xl text-light font-Typewriter2">
                     <span className=" text-secondary font-Typewriter2 border-l-4 border-secondary pl-8">01. </span>About Me
                 </h1>
-                <div className="flex">
+                <div className="flex flex-col md:flex-row">
                     <p className="max-w-2xl mt-10 text-lg text-gray-300">
                         Hey there, I'm Moeed, a Computer Science student at the University of Manchester.
                         My passion lies at the intersection of web and mobile development, machine learning, and algorithms.
@@ -26,7 +25,7 @@ export default function About() {
                         If you share the same enthusiasm for technology and programming, feel free to reach out and connect!
                         You can also explore more about my projects and checkout my insights on my blog below.
                     </p>
-                    <img src={picture} alt="Image of Moeed Chughtai" className="object-cover w-80 h-70 ml-36 rounded-full border-4 border-secondary"></img>
+                    <img src={picture} alt="Image of Moeed Chughtai" className="object-cover w-full md:w-80 h-auto mt-10 md:mt-0 ml-0 md:ml-36 rounded-full border-4 border-secondary"></img> {/* Modified width and margin classes */}
                 </div>
             </div>
         </div>
