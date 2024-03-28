@@ -19,7 +19,8 @@ export default {
         Typewriter2: ["Typewriter-Bold"],
       },
       margin: {
-        100: "24rem"
+        100: "24rem",
+        2.5: "0.625rem",
       },
       spacing: {
         7.5: "1.8rem",
@@ -31,7 +32,11 @@ export default {
       width: {
         94: "23rem",
         92: "21.7rem",
-      }
+      },
+      height: {
+        105: "50rem",
+        88: "20.5rem",
+      },
     },
   },
   plugins: [],

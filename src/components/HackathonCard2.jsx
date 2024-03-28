@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../index.css";
 
-export default function ProjectCard(props) {
+export default function HackathonCard2(props) {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
     const nextImage = () => {
