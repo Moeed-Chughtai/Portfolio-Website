@@ -1,17 +1,26 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../index.css";
 
 export default function Landing() {
+    const [showContent, setShowContent] = useState(false);
     const isSmallScreen = () => window.innerWidth < 640;
 
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+            setShowContent(true);
+        }, 550);
+
+        return () => clearTimeout(timeout);
+    }, []);
+
     return (
-        <div className="mt-16 sm:mt-40 text-secondary flex justify-center">
+        <div className={`mt-16 sm:mt-40 text-secondary flex justify-center ${showContent ? 'opacity-100 transition-opacity duration-500' : 'opacity-0'}`}>
             {!isSmallScreen() && (
                 <div className="fixed left-8 sm:left-20 bottom-0 h-40 border-l-2 border-lighter"></div>
             )}
             {!isSmallScreen() && (
                 <>
-                    <a href="https://github.com/Moeed-Chughtai">
+                    <a href="https://github.com/Moeed-Chughtai" target="_blank">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             role="img"
@@ -26,7 +35,7 @@ export default function Landing() {
                             <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                         </svg>
                     </a>
-                    <a href="https://www.linkedin.com/in/moeed-chughtai/">
+                    <a href="https://www.linkedin.com/in/moeed-chughtai/" target="_blank">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             role="img"
@@ -43,7 +52,7 @@ export default function Landing() {
                             <circle cx="4" cy="4" r="2"></circle>
                         </svg>
                     </a>
-                    <a href="https://medium.com/@moeed.chughtai">
+                    <a href="https://medium.com/@moeed.chughtai" target="_blank">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             role="img"
@@ -57,7 +66,6 @@ export default function Landing() {
                     </a>
                 </>
             )}
-            {/* Content */}
             <div className="md:block hidden">
                 <a href="mailto:moeed.chughtai@outlook.com">
                     <div className="fixed -right-7.5 bottom-72 transform rotate-90 origin-center text-lighter hover:text-secondary">moeed.chughtai@outlook.com</div>
@@ -66,7 +74,7 @@ export default function Landing() {
             <div className="flex flex-col justify-center w-4/5 sm:w-3/5">
                 <p className="font-medium ml-2 font-Typewriter2">Hi, my name is</p>
                 <h1 className="text-7xl my-5 mx-1 text-light font-bold">Moeed Chughtai.</h1>
-                <h2 className="text-2xl sm:text-3xl my-5 mx-1 text-secondary font-bold">I like to build things.</h2>
+                <h2 className="text-2xl sm:text-3xl my-5 mx-1 text-secondary font-bold">I like to bring ideas to life through coding.</h2>
                 <p className=" sm:max-w-xl sm:text-xl mt-5 ml-2 text-gray-300 font-medium">
                     I am a Computer Science student with a passion for coding and creating.
                     From building responsive web applications to diving into mobile app development, 
@@ -82,7 +90,7 @@ export default function Landing() {
                 <>
                     <div className="absolute right-8 bottom-0 h-20 border-l-2 border-lighter"></div>
                     <>
-                        <a href="https://github.com/Moeed-Chughtai">
+                        <a href="https://github.com/Moeed-Chughtai" target="_blank">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 role="img"
@@ -97,7 +105,7 @@ export default function Landing() {
                                 <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                             </svg>
                         </a>
-                        <a href="https://www.linkedin.com/in/moeed-chughtai/">
+                        <a href="https://www.linkedin.com/in/moeed-chughtai/" target="_blank">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 role="img"
@@ -114,7 +122,7 @@ export default function Landing() {
                                 <circle cx="4" cy="4" r="2"></circle>
                             </svg>
                         </a>
-                        <a href="https://medium.com/@moeed.chughtai">
+                        <a href="https://medium.com/@moeed.chughtai" target="_blank">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 role="img"

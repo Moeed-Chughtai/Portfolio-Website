@@ -19,8 +19,8 @@ export default function HackathonCard(props) {
     const visibleTechnologies = props.technologies.slice(0, 6);
 
     return (
-        <div className="flex sm:flex-row flex-col h-105 sm:h-88 bg-gray-900 rounded-lg shadow-lg mt-10 p-6 w-full transition duration-300 ease-in-out transform hover:scale-105 relative">
-            <div className="relative w-full flex justify-center items-center">
+        <div className="flex sm:flex-row flex-col h-105 sm:h-90 bg-gray-900 rounded-lg shadow-lg mt-10 p-6 w-full transition duration-300 ease-in-out transform hover:scale-105 relative mb-8"> {/* Margin added here */}
+            <div className="relative w-full flex justify-center items-center mr-5">
                 {props.images.map((image, index) => (
                     <img
                         key={index}
@@ -57,7 +57,7 @@ export default function HackathonCard(props) {
             <div className="flex flex-col w-full mr-6">
                 <div className="flex justify-between">
                     <h2 className="text-3xl text-light font-semibold mb-4 transition duration-300 ease-in-out transform hover:text-secondary font-Typewriter2">{props.title}</h2>
-                    <a href={props.link} className="flex items-right text-gray-300 transition duration-300 ease-in-out transform hover:scale-105 relative hover:text-secondary">
+                    <a href={props.link} target="_blank" className="flex items-right text-gray-300 transition duration-300 ease-in-out transform hover:scale-105 relative hover:text-secondary">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-github w-6 h-6 sm:w-8 sm:h-8">
                             <title>GitHub</title>
                             <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>

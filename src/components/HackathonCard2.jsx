@@ -19,12 +19,12 @@ export default function HackathonCard2(props) {
     const visibleTechnologies = props.technologies.slice(0, 6);
 
     return (
-        <div className="flex flex-col h-105 sm:h-88 bg-gray-900 rounded-lg shadow-lg mt-10 p-6 w-full transition duration-300 ease-in-out transform hover:scale-105 relative">
+        <div className="flex flex-col bg-gray-900 rounded-lg shadow-lg mt-10 p-6 w-full transition duration-300 ease-in-out transform hover:scale-105 relative">
             <div className="flex flex-col w-full mr-6">
                 <div className="flex justify-between">
                     <h2 className="text-3xl text-light font-semibold mb-4 transition duration-300 ease-in-out transform hover:text-secondary font-Typewriter2">{props.title}</h2>
-                    <a href={props.link} className="flex items-center text-gray-300 transition duration-300 ease-in-out transform hover:scale-105 relative hover:text-secondary -mt-2.5 ml-8">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-github w-6 h-6 sm:w-8 sm:h-8 mr-2">
+                    <a href={props.link} target="_blank" className="flex items-center text-gray-300 transition duration-300 ease-in-out transform hover:scale-105 relative hover:text-secondary -mt-2.5 ml-8">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-github w-6 h-6 mr-2">
                             <title>GitHub</title>
                             <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                         </svg>
@@ -39,25 +39,20 @@ export default function HackathonCard2(props) {
                     </ul>
                     {props.technologies.length > 6 && <span className="text-gray-300 ml-2">+ {props.technologies.length - 5} more</span>}
                 </div>
-                <div className="relative w-full flex justify-center align-middle -mt-10 sm:mt-0">
-                    {props.images.map((image, index) => (
-                        <img
-                            key={index}
-                            src={image}
-                            alt={`Project ${index}`}
-                            className={` mt-20 absolute rounded-lg overflow-hidden border-2 border-gray-700 transition duration-300 ease-in-out max-h-56 ${
-                                index === currentImageIndex ? 'opacity-100' : 'opacity-0 pointer-events-none'
-                            } ${index === currentImageIndex ? 'rotate-0 scale-100' : 'rotate-3 scale-105'}`}
-                        />
-                    ))}
+                <div className="flex flex-row justify-center align-middle">
                     <button
-                        className="absolute -left-5 sm:left-0 top-40 sm:top-1/2 transform -translate-y-1/2 bg-gray-800 text-gray-300 hover:text-gray-400 transition duration-300 ease-in-out p-2 rounded-full z-10"
+                        className="self-center transform bg-gray-800 text-gray-300 hover:text-gray-400 transition duration-300 ease-in-out p-2 rounded-full z-10"
                         onClick={prevImage}
                     >
                         &lt;
                     </button>
+                    <img
+                        src={props.images[currentImageIndex]}
+                        alt={`Project ${currentImageIndex}`}
+                        className="object-contain self-center w-fit -ml-5 -mr-5 rounded-lg overflow-hidden border-2 border-gray-700 transition duration-300 ease-in-out max-h-56"
+                    />
                     <button
-                        className="absolute -right-5 sm:right-0 top-40 sm:top-1/2 transform -translate-y-1/2 bg-gray-800 text-gray-300 hover:text-gray-400 transition duration-300 ease-in-out p-2 rounded-full z-10"
+                        className="self-center transform bg-gray-800 text-gray-300 hover:text-gray-400 transition duration-300 ease-in-out p-2 rounded-full z-10"
                         onClick={nextImage}
                     >
                         &gt;
