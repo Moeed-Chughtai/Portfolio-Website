@@ -12,7 +12,7 @@ export default function Navbar() {
 
     return (
         <nav className="flex justify-between px-10 py-10 bg-primary text-base">
-            <img src={logo} alt="logo" className="w-5 h-5" />
+            <img src={logo} alt="logo" className="w-20 h-20 -ml-6 sm:ml-0 sm:w-24 sm:h-24" />
             <div className="block lg:hidden">
                 <button onClick={toggleMenu} className="text-white focus:outline-none">
                     <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
