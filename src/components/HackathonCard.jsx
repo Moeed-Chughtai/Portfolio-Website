@@ -20,15 +20,25 @@ export default function HackathonCard(props) {
 
     return (
         <div className="flex sm:flex-row flex-col h-105 sm:h-88 bg-gray-900 rounded-lg shadow-lg mt-10 p-6 w-full transition duration-300 ease-in-out transform hover:scale-105 relative">
-            <div className="relative w-full">
+            <div className="relative w-full flex justify-center items-center">
                 {props.images.map((image, index) => (
                     <img
                         key={index}
                         src={image}
                         alt={`Project ${index}`}
-                        className={`ml-20 mt-20 absolute rounded-lg overflow-hidden border-2 border-gray-700 transition duration-300 ease-in-out ${
+                        className={`absolute rounded-lg overflow-hidden border-2 border-gray-700 transition duration-300 ease-in-out ${
                             index === currentImageIndex ? 'opacity-100' : 'opacity-0 pointer-events-none'
                         } ${index === currentImageIndex ? 'rotate-0 scale-100' : 'rotate-3 scale-105'}`}
+                        style={{ 
+                            maxWidth: '100%', 
+                            maxHeight: '100%', 
+                            width: 'auto', 
+                            height: 'auto',
+                            position: 'absolute',
+                            left: '48%',
+                            top: '50%',
+                            transform: 'translate(-50%, -50%)',
+                        }}
                     />
                 ))}
                 <button
@@ -44,7 +54,7 @@ export default function HackathonCard(props) {
                     &gt;
                 </button>
             </div>
-			<div className="flex flex-col w-full mr-6">
+            <div className="flex flex-col w-full mr-6">
                 <div className="flex justify-between">
                     <h2 className="text-3xl text-light font-semibold mb-4 transition duration-300 ease-in-out transform hover:text-secondary font-Typewriter2">{props.title}</h2>
                     <a href={props.link} className="flex items-right text-gray-300 transition duration-300 ease-in-out transform hover:scale-105 relative hover:text-secondary">

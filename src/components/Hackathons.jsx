@@ -6,7 +6,7 @@ import HackathonCard2 from "./HackathonCard2";
 import data from "../data/hackathon_data";
 
 export default function Hackathons() {
-    const isSmScreen = useMediaQuery('(max-width: 640px)'); // Define the screen size for 'sm'
+    const isSmScreen = useMediaQuery('(max-width: 640px)');
 
     const cards = data.map(item => {
         return (

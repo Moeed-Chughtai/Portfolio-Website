@@ -1,3 +1,9 @@
+import spendwise1 from "../assets/img/spendwise1.png";
+import spendwise2 from "../assets/img/spendwise2.png";
+import spendwise3 from "../assets/img/spendwise3.png";
+import spendwise4 from "../assets/img/spendwise4.png";
+
+
 export default [
     {
         id: 1,
@@ -8,9 +14,10 @@ export default [
             The hackathon provided valuable collaborative problem-solving experience under time constraints, culminating in a presentation to judges.
         `,
         images: [
-            "https://via.placeholder.com/150",
-            "https://via.placeholder.com/200",
-            "https://via.placeholder.com/250"
+            spendwise1,
+            spendwise2,
+            spendwise3,
+            spendwise4
         ],
         link: "https://github.com/aleifericsson/spendwiseFAMS",
         technologies: ["Python", "JavaScript", "HTML", "CSS", "Capitol One API"] 

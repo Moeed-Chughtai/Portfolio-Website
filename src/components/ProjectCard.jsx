@@ -16,7 +16,7 @@ export default function ProjectCard(props) {
         );
     };
 
-    const visibleTechnologies = props.technologies.slice(0, 6);
+    const visibleTechnologies = props.technologies.slice(0, 7);
 
     return (
         <div className="flex sm:flex-row flex-col h-105 sm:h-88 bg-gray-900 rounded-lg shadow-lg mt-10 p-6 w-full transition duration-300 ease-in-out transform hover:scale-105 relative">
@@ -37,18 +37,19 @@ export default function ProjectCard(props) {
                             <li key={index} className="bg-gray-800 text-gray-300 text-sm px-2 py-1 rounded-full mr-2 mb-2 transition duration-300 ease-in-out transform hover:bg-secondary hover:text-black font-medium">{tech}</li>
                         ))}
                     </ul>
-                    {props.technologies.length > 5 && <span className="text-gray-300 ml-2">+ {props.technologies.length - 5} more</span>}
+                    {props.technologies.length > 7 && <span className="text-gray-300 ml-2">+ {props.technologies.length - 7} more</span>}
                 </div>
             </div>
-            <div className="relative w-full flex justify-center align-middle -mt-10 sm:mt-0">
+            <div className="relative w-full flex justify-center items-center -mt-10 sm:mt-0">
                 {props.images.map((image, index) => (
                     <img
                         key={index}
                         src={image}
                         alt={`Project ${index}`}
-                        className={`ml-20 mt-20 absolute rounded-lg overflow-hidden border-2 border-gray-700 transition duration-300 ease-in-out ${
+                        className={`absolute rounded-lg overflow-hidden border-2 border-gray-700 transition duration-300 ease-in-out ${
                             index === currentImageIndex ? 'opacity-100' : 'opacity-0 pointer-events-none'
                         } ${index === currentImageIndex ? 'rotate-0 scale-100' : 'rotate-3 scale-105'}`}
+                        style={{ maxWidth: '100%', maxHeight: '100%', width: 'auto', height: 'auto' }}
                     />
                 ))}
                 <button

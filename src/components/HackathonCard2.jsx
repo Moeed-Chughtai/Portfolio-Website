@@ -19,7 +19,7 @@ export default function HackathonCard2(props) {
     const visibleTechnologies = props.technologies.slice(0, 6);
 
     return (
-        <div className="flex sm:flex-row flex-col h-105 sm:h-88 bg-gray-900 rounded-lg shadow-lg mt-10 p-6 w-full transition duration-300 ease-in-out transform hover:scale-105 relative">
+        <div className="flex flex-col h-105 sm:h-88 bg-gray-900 rounded-lg shadow-lg mt-10 p-6 w-full transition duration-300 ease-in-out transform hover:scale-105 relative">
             <div className="flex flex-col w-full mr-6">
                 <div className="flex justify-between">
                     <h2 className="text-3xl text-light font-semibold mb-4 transition duration-300 ease-in-out transform hover:text-secondary font-Typewriter2">{props.title}</h2>
@@ -37,32 +37,32 @@ export default function HackathonCard2(props) {
                             <li key={index} className="bg-gray-800 text-gray-300 text-sm px-2 py-1 rounded-full mr-2 mb-2 transition duration-300 ease-in-out transform hover:bg-secondary hover:text-black font-medium">{tech}</li>
                         ))}
                     </ul>
-                    {props.technologies.length > 5 && <span className="text-gray-300 ml-2">+ {props.technologies.length - 5} more</span>}
+                    {props.technologies.length > 6 && <span className="text-gray-300 ml-2">+ {props.technologies.length - 5} more</span>}
                 </div>
-            </div>
-            <div className="relative w-full flex justify-center align-middle -mt-10 sm:mt-0">
-                {props.images.map((image, index) => (
-                    <img
-                        key={index}
-                        src={image}
-                        alt={`Project ${index}`}
-                        className={`ml-20 mt-20 absolute rounded-lg overflow-hidden border-2 border-gray-700 transition duration-300 ease-in-out ${
-                            index === currentImageIndex ? 'opacity-100' : 'opacity-0 pointer-events-none'
-                        } ${index === currentImageIndex ? 'rotate-0 scale-100' : 'rotate-3 scale-105'}`}
-                    />
-                ))}
-                <button
-                    className="absolute -left-5 sm:left-0 top-40 sm:top-1/2 transform -translate-y-1/2 bg-gray-800 text-gray-300 hover:text-gray-400 transition duration-300 ease-in-out p-2 rounded-full z-10"
-                    onClick={prevImage}
-                >
-                    &lt;
-                </button>
-                <button
-                    className="absolute -right-5 sm:right-0 top-40 sm:top-1/2 transform -translate-y-1/2 bg-gray-800 text-gray-300 hover:text-gray-400 transition duration-300 ease-in-out p-2 rounded-full z-10"
-                    onClick={nextImage}
-                >
-                    &gt;
-                </button>
+                <div className="relative w-full flex justify-center align-middle -mt-10 sm:mt-0">
+                    {props.images.map((image, index) => (
+                        <img
+                            key={index}
+                            src={image}
+                            alt={`Project ${index}`}
+                            className={` mt-20 absolute rounded-lg overflow-hidden border-2 border-gray-700 transition duration-300 ease-in-out max-h-56 ${
+                                index === currentImageIndex ? 'opacity-100' : 'opacity-0 pointer-events-none'
+                            } ${index === currentImageIndex ? 'rotate-0 scale-100' : 'rotate-3 scale-105'}`}
+                        />
+                    ))}
+                    <button
+                        className="absolute -left-5 sm:left-0 top-40 sm:top-1/2 transform -translate-y-1/2 bg-gray-800 text-gray-300 hover:text-gray-400 transition duration-300 ease-in-out p-2 rounded-full z-10"
+                        onClick={prevImage}
+                    >
+                        &lt;
+                    </button>
+                    <button
+                        className="absolute -right-5 sm:right-0 top-40 sm:top-1/2 transform -translate-y-1/2 bg-gray-800 text-gray-300 hover:text-gray-400 transition duration-300 ease-in-out p-2 rounded-full z-10"
+                        onClick={nextImage}
+                    >
+                        &gt;
+                    </button>
+                </div>
             </div>
         </div>
     );

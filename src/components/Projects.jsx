@@ -1,12 +1,25 @@
 import React from "react";
+import { useMediaQuery } from '@react-hook/media-query';
 import "../index.css";
 import ProjectCard from "./ProjectCard";
+import HackathonCard2 from "./HackathonCard2";
 import data from "../data/project_data";
 
 export default function Projects() {
+    const isSmScreen = useMediaQuery('(max-width: 640px)');
+
     const cards = data.map(item => {
         return (
             <ProjectCard
+                key={item.id}
+                {...item}
+            />
+        )
+    })
+
+    const cards2 = data.map(item => {
+        return (
+            <HackathonCard2
                 key={item.id}
                 {...item}
             />
@@ -20,7 +33,7 @@ export default function Projects() {
                     <span className="text-secondary font-Typewriter2 border-l-4 border-secondary pl-8">02. </span>Projects
                 </h1>
                 <div>
-                    {cards}
+                    {isSmScreen ? cards2 : cards}
                 </div>
             </div>
         </div>

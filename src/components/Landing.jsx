@@ -2,7 +2,6 @@ import React from "react";
 import "../index.css";
 
 export default function Landing() {
-    // Function to check screen size
     const isSmallScreen = () => window.innerWidth < 640;
 
     return (
