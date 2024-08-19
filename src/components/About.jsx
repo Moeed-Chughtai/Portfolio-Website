@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import ScrollTrigger from "react-scroll-trigger";
-import picture from "../assets/moeed-img.png";
+import picture1 from "../assets/moeed-img1.jpg";
+import picture2 from "../assets/moeed-img2.jpg";
+import picture3 from "../assets/moeed-img3.jpg";
+import picture4 from "../assets/moeed-img4.jpg";
 import "../index.css";
 
 export default function About() {
@@ -19,33 +22,33 @@ export default function About() {
                     </h1>
                     <div className="flex flex-col md:flex-row">
                         <p className="max-w-2xl mt-10 text-lg text-gray-300">
-                            Hey there, I'm Moeed, a Computer Science student at the University of Manchester.
-                            My passion lies at the intersection of web and mobile development, machine learning, and algorithms.
+                            Hi there! I'm Moeed, an aspiring Software Engineer and Machine Learning Enthusiast.
+                            My passion lies in developing the web and mobile development applications that integrate machine learning models to solve complex problems, personalise user experiences and drive innovation.
                             <br /><br />
-                            In my journey so far, I've built a variety of full-stack web applications leveraging a range of technologies like React, Next.js, Tailwind CSS, Express, Node.js, and databases like SQL and MongoDB.
-                            From building this portfolio website to crafting platforms for ecommerce ventures, I've enjoyed every moment of learning and refining my skills.
+                            I specialise in building full-stack web and mobile applications that address real-world problems.
+                            I use React and Next.js for frontend development, and rely on Express and Node.js for backend services, or Flask for Python-based machine learning projects.
+                            For data storage, I work with both SQL databases and MongoDB. In mobile app development, I use Java, Kotlin, and React Native.
+                            My projects include developing a machine learning medical app to assist doctors and a web app that helps users navigate election policies and engage with candidates, using the OpenAI API.
                             <br /><br />
-                            I also enjoy developing mobile applications using Java and Kotlin in Android Studio.
-                            These projects range from reimagining existing software to developing machine learning solutions aimed at addressing real-world challenges.
+                            In my machine learning projects, I develop models to tackle complex challenges such as detecting deepfake videos and predicting equipment failures for timely maintenance.
+                            I use a range of techniques including regression, neural networks and decision trees, as well as deep learning methods for computer vision and natural language processing.
+                            To ensure optimal performance, I enhance these models through hyperparameter tuning and feature engineering, delivering solutions that are both accurate and impactful.
                             <br /><br />
-                            My love for mathematics drives my enthusiasm for machine learning and algorithms.
-                            In my projects, I not only implement established algorithms but also design my own, exploring new avenues of problem-solving and innovation.
-                            <br /><br />
-                            If you share the same enthusiasm for technology and programming, feel free to reach out and connect!
+                            Let's Connect! Open to opportunities, collaborations and networking.
                         </p>
-                        <img src={picture} alt="Image of Moeed Chughtai" className="object-cover w-full md:w-80 h-auto mt-10 md:mt-0 ml-0 md:ml-36 rounded-full border-4 border-secondary" />
+                        <img src={picture2} alt="Image of Moeed Chughtai" className="object-cover w-full md:w-80 h-auto mt-10 md:mt-0 ml-0 md:ml-36 rounded-full border-4 border-secondary" />
                     </div>
                     <div className="flex flex-row">
                         <div className="group mt-10 sm:mt-14">
                             <h2 className="text-base sm:text-2xl font-semibold text-light font-Typewriter2 mb-4">Programming Languages</h2>
                             <ul className="list-disc pl-5">
-                                <li className="sm:text-lg">Python</li>
+                                <li className="sm:text-lg">JavaScript</li>
+                                <li className="sm:text-lg mt-2">TypeScript</li>
+                                <li className="sm:text-lg mt-2">HTML/CSS</li>
+                                <li className="sm:text-lg mt-2">Python</li>
                                 <li className="sm:text-lg mt-2">Java</li>
                                 <li className="sm:text-lg mt-2">Kotlin</li>
-                                <li className="sm:text-lg mt-2">C</li>
-                                <li className="sm:text-lg mt-2">JavaScript</li>
-                                <li className="sm:text-lg mt-2">HTML</li>
-                                <li className="sm:text-lg mt-2">CSS</li>
+                                <li className="sm:text-lg mt-2">C/C++</li>
                                 <li className="sm:text-lg mt-2">SQL</li>
                             </ul>
                         </div>
@@ -56,16 +59,24 @@ export default function About() {
                                 <li className="sm:text-lg mt-2">Next.js</li>
                                 <li className="sm:text-lg mt-2">Express</li>
                                 <li className="sm:text-lg mt-2">Node.js</li>
-                                <li className="sm:text-lg mt-2">Tailwind CSS</li>
+                                <li className="sm:text-lg mt-2">TailwindCSS</li>
                                 <li className="sm:text-lg mt-2">Flask</li>
                                 <li className="sm:text-lg mt-2">TensorFlow</li>
+                                <li className="sm:text-lg mt-2">Scikit-learn</li>
+                                <li className="sm:text-lg mt-2">OpenCV</li>
+                                <li className="sm:text-lg mt-2">Pandas</li>
+                                <li className="sm:text-lg mt-2">Numpy</li>
                             </ul>
                         </div>
                         <div className="group mt-10 sm:mt-14 ml-5 sm:ml-8">
-                            <h2 className="text-base sm:text-2xl font-semibold text-light font-Typewriter2 mb-4">Tools</h2>
+                            <h2 className="text-base sm:text-2xl font-semibold text-light font-Typewriter2 mb-4">DevOps/Databases</h2>
                             <ul className="list-disc pl-5">
-                                <li className="sm:text-lg">Git</li>
-                                <li className="sm:text-lg mt-2">Android Studio</li>
+                                <li className="sm:text-lg">Docker</li>
+                                <li className="sm:text-lg mt-2">AWS</li>
+                                <li className="sm:text-lg mt-2">Git</li>
+                                <li className="sm:text-lg mt-2">MySQL</li>
+                                <li className="sm:text-lg mt-2">MongoDB</li>
+                                <li className="sm:text-lg mt-2">Firebase</li>
                             </ul>
                         </div>
                     </div>
