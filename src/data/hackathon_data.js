@@ -12,6 +12,11 @@ import peak3 from "../assets/img/peak3.png";
 import peak4 from "../assets/img/peak4.png";
 import peak5 from "../assets/img/peak5.png";
 import peak6 from "../assets/img/peak6.png";
+import inform1 from "../assets/img/inform1.png";
+import inform2 from "../assets/img/inform2.png";
+import inform3 from "../assets/img/inform3.png";
+import inform4 from "../assets/img/inform4.png";
+import inform5 from "../assets/img/inform5.png";
 
 
 export default [
@@ -24,7 +29,11 @@ export default [
         It also features an OpenAI-powered chatbot that helps users query and compare policies, ensuring they can make well-informed voting decisions.
         `,
         images: [
-            
+            inform1,
+            inform2,
+            inform3,
+            inform4,
+            inform5
         ],
         link: "https://github.com/jwoleabu/BCLHack2024",
         technologies: ["JavaScript", "React", "TailwindCSS", "Python", "Flask", "MongoDB", "OpenAI API"] 
